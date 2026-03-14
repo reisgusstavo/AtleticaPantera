@@ -1,0 +1,78 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("img/fundo.png");
+    background-size: cover;        /* faz a imagem cobrir toda a tela */
+    background-position: center;   /* centraliza a imagem */
+    background-repeat: no-repeat;  /* evita repetir a imagem */
+    background-attachment: fixed;  /* deixa o fundo fixo */
+}
+
+
+h1{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.carrinho-container{
+    width: 600px;
+    margin: auto;
+    margin-top: 60px;
+    padding: 30px;
+
+    background: rgba(255,255,255,0.9); /* transparência */
+    border-radius: 10px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+#listaCarrinho{
+    list-style: none;
+    padding: 0;
+}
+
+#listaCarrinho li{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#total{
+    text-align: right;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.botoes{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.finalizar{
+    background: #2b0040; /* #6a00a3 */
+    color: white;
+}
+
+.limpar{
+    background: #6a00a3;
+    color: white;
+}
+
+.voltar{
+    background: #2b0040;
+    color: white;
+}
