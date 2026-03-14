@@ -1,11 +1,50 @@
 body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("img/fundo.png");
-    background-size: cover;       
-    background-position: center;   
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
+
+    background-image: url("../img/fundo.png");
+    background-size: cover;        /* faz a imagem cobrir toda a tela */
+    background-position: center;   /* centraliza a imagem */
+    background-repeat: no-repeat;  /* evita repetir a imagem */
+    background-attachment: fixed;  /* deixa o fundo fixo */
+}
+
+header{
+width:100%;
+padding:20px 0;
+background:#180022;
+}
+
+.container{
+width:90%;
+margin:auto;
+}
+
+.header-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+height:100px;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+.hero{
+height:20vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#2b0040,#6a00a3);
+text-align:center;
+color:white;
 }
 
 h1{
@@ -18,7 +57,7 @@ button{
 
 .produtos{
 
-padding:80px 10%;
+padding:60px 20%;
 
 }
 
@@ -90,4 +129,33 @@ padding:10px 20px;
 
 border-radius:6px;
 
+}
+
+footer{
+margin-top:60px;
+text-align:center;
+padding:20px;
+background:#120018;
+}
+
+footer p {
+  color:#ccc;
+  margin: 0;
+}
+
+.creditos{
+font-size:14px;
+text-align:center;
+margin-top:15px;
+color:#ccc;
+}
+
+.creditos a{
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+}
+
+.creditos a:hover{
+text-decoration:underline;
 }

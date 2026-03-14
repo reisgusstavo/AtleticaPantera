@@ -1,13 +1,24 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    display:flex;
+    flex-direction:column;
 
-    background-image: url("img/fundo.png");
+    background-image: url("../img/fundo.png");
     background-size: cover;        /* faz a imagem cobrir toda a tela */
     background-position: center;   /* centraliza a imagem */
     background-repeat: no-repeat;  /* evita repetir a imagem */
     background-attachment: fixed;  /* deixa o fundo fixo */
+}
+
+main{
+flex:1;
 }
 
 
@@ -75,4 +86,33 @@ button{
 .voltar{
     background: #2b0040;
     color: white;
+}
+
+footer{
+margin-top:60px;
+text-align:center;
+padding:20px;
+background:#120018;
+}
+
+footer p {
+  color:#ccc;
+  margin: 0;
+}
+
+.creditos{
+font-size:14px;
+text-align:center;
+margin-top:15px;
+color:#ccc;
+}
+
+.creditos a{
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+}
+
+.creditos a:hover{
+text-decoration:underline;
 }
