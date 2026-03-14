@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Carrinho</title>
-<link rel="stylesheet" href="carrinho.css">
+<link rel="stylesheet" href="css/carrinho.css">
 </head>
 
 <body>
+<main>
 
 <h1>SEU CARRINHO</h1>
 
@@ -58,19 +59,24 @@ location.reload()
 function FinalizarPedido() {
 
 let mensagem = "Olá, quero comprar:%0A"
-
 carrinho.forEach(item => {
 mensagem += item.produto + " - R$ " + item.preco + "%0A"
 })
-
 mensagem += "%0ATotal: R$ " + total
-
 window.open("https://wa.me/5545998118695?text=" + mensagem, "_blank")
 
 }
 
 
 </script>
+
+</main>
+<footer>
+  <p>© 2026 Atlética Pantera Negra</p>
+  <p class="creditos">
+    Desenvolvido por <a href="https://instagram.com/seuinsta" target="_blank">@reis.gusstavo</a>
+  </p>
+</footer>
 
 </body>
 </html>
