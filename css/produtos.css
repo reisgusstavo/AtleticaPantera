@@ -1,13 +1,19 @@
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-
-    background-image: url("../img/fundo.png");
-    background-size: cover;        /* faz a imagem cobrir toda a tela */
-    background-position: center;   /* centraliza a imagem */
-    background-repeat: no-repeat;  /* evita repetir a imagem */
-    background-attachment: fixed;  /* deixa o fundo fixo */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background-image: url("../img/fundo.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+/* HEADER */
 
 header{
 width:100%;
@@ -17,6 +23,7 @@ background:#180022;
 
 .container{
 width:90%;
+max-width:1200px;
 margin:auto;
 }
 
@@ -24,10 +31,16 @@ margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
+flex-wrap:wrap;
 }
 
 .logo{
-height:100px;
+height:80px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
 }
 
 nav a{
@@ -37,99 +50,71 @@ color:white;
 font-weight:500;
 }
 
+/* HERO */
+
 .hero{
-height:20vh;
+min-height:20vh;
 display:flex;
 align-items:center;
 justify-content:center;
 background:linear-gradient(135deg,#2b0040,#6a00a3);
 text-align:center;
 color:white;
+padding:15px;
 }
 
 h1{
-    text-align:center;
+text-align:center;
 }
 
-button{
-    cursor:pointer;
-}
+/* PRODUTOS */
 
 .produtos{
-
-padding:60px 20%;
-
+padding:60px 10%;
 }
-
 
 .grid-produtos{
-
 display:grid;
-
-grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-
-gap:40px;
-
+grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+gap:30px;
 }
-
 
 .produto{
-
 background:rgba(255,255,255,0.9);
-
 padding:20px;
-
 border-radius:10px;
-
 text-align:center;
-
 box-shadow:0 8px 20px rgba(0,0,0,0.3);
-
 transition:0.3s;
-
+width:100%;
 }
-
 
 .produto:hover{
-
 transform:translateY(-8px);
-
 }
-
 
 .produto img{
-
-width:50%;
-
+width:100%;
+max-width:180px;
 border-radius:8px;
-
 }
-
 
 .preco{
-
 font-size:20px;
-
 font-weight:bold;
-
 margin:10px 0;
-
 }
-
 
 .produto button{
-
 background:#4b0082;
-
 color:white;
-
 border:none;
-
 padding:10px 20px;
-
 border-radius:6px;
-
+cursor:pointer;
 }
+
+/* FOOTER */
 
 footer{
 margin-top:60px;
@@ -139,8 +124,8 @@ background:#120018;
 }
 
 footer p {
-  color:#ccc;
-  margin: 0;
+color:#ccc;
+margin: 0;
 }
 
 .creditos{
@@ -158,4 +143,35 @@ font-weight:bold;
 
 .creditos a:hover{
 text-decoration:underline;
+}
+
+/* 📱 RESPONSIVO */
+
+@media (max-width: 768px){
+
+.header-content{
+flex-direction:column;
+gap:15px;
+}
+
+nav{
+justify-content:center;
+}
+
+nav a{
+margin:10px;
+}
+
+.hero{
+min-height:15vh;
+}
+
+.produtos{
+padding:40px 5%;
+}
+
+.produto img{
+max-width:140px;
+}
+
 }
