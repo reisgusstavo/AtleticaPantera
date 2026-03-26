@@ -9,7 +9,7 @@
 <body>
   <header>
     <div class="container header-content">
-        <img src="img/logo.png" class="logo">
+        <a href="index.html"><img src="img/logo.png" class="logo"></a>
 
         <nav>
             <a href="index.html">Home</a>
@@ -31,45 +31,69 @@
 <div class="produtos">
 
   <div class="produto">
-    <img src="img/caneca.png">
-    <h3>Caneca Pantera</h3>
-    <p>R$ 50,00</p>
-    <button onclick="adicionarCarrinho('Caneca Pantera', 50)">Adicionar ao carrinho</button>
-  </div>
+  <img src="img/caneca.png">
+  <h3>Caneca Pantera</h3>
+  <p>R$ 50,00</p>
+  <button onclick="adicionarCarrinho('Caneca Pantera', 50, 'img/caneca.png')">
+    Adicionar ao carrinho
+  </button>
+</div>
 
-  <div class="produto">
-    <img src="img/camiseta.png">
-    <h3>Camiseta Atlética</h3>
-    <p>R$ 50,00</p>
-    <button onclick="adicionarCarrinho('Camiseta Atlética', 50)">Adicionar ao carrinho</button>
-  </div>
+<div class="produto">
+  <img src="img/camiseta.png">
+  <h3>Camiseta Atlética</h3>
+  <p>R$ 50,00</p>
+  <button onclick="adicionarCarrinho('Camiseta Atlética', 50, 'img/camiseta.png')">
+    Adicionar ao carrinho
+  </button>
+</div>
 
-    <div class="produto">
-    <img src="img/jersey.png">
-    <h3>Jersey Pantera</h3>
-    <p>R$ 150,00</p>
-    <button onclick="adicionarCarrinho('Jersey Pantera', 150)">Adicionar ao carrinho</button>
-  </div>
+<div class="produto">
+  <img src="img/jersey.png">
+  <h3>Jersey Pantera</h3>
+  <p>R$ 150,00</p>
+  <button onclick="adicionarCarrinho('Jersey Pantera', 150, 'img/jersey.png')">
+    Adicionar ao carrinho
+  </button>
+</div>
 
-    <div class="produto">
-    <img src="img/embreve.png">
-    <h3>Uniforme Pantera</h3>
-    <p>R$ ??,00</p>
-    <button>Em Breve!!</button>
-  </div>
+<div class="produto">
+  <img src="img/embreve.png">
+  <h3>Uniforme Pantera</h3>
+  <p>Em breve</p>
+  <button disabled>
+    Em breve
+  </button>
+</div>
 
-    <div class="produto">
-    <img src="img/passociacao.png">
-    <h3>Associação Pantera</h3>
-    <p>R$ 40,00</p>
-    <button onclick="adicionarCarrinho('Associação Pantera', 40)">Adicionar ao carrinho</button>
-  </div>
-</a>
+<div class="produto">
+  <img src="img/passociacao.png">
+  <h3>Associação Pantera</h3>
+  <p>R$ 40,00</p>
+  <button onclick="adicionarCarrinho('Associação Pantera', 40, 'img/passociacao.png')">
+    Adicionar ao carrinho
+  </button>
+</div>
 
 </div>
 
 
 <script src="js/carrinho.js"></script>
+<script>
+function adicionarCarrinho(nome, preco, imagem){
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    carrinho.push({
+        nome: nome,
+        preco: preco,
+        imagem: imagem
+    });
+
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+    alert("Produto adicionado ao carrinho!");
+}
+</script>
 
 <footer>
   <p>© 2026 Atlética Pantera Negra</p>
